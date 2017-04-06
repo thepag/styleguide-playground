@@ -11,9 +11,16 @@
     "url": "git+https://github.com/thepag/styleguide-playground.git"
   },
   "author": "Mark J Panaghiston <markp@happyworm.com> (http://happyworm.com/)",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/thepag/styleguide-playground/issues"
   },
-  "homepage": "https://github.com/thepag/styleguide-playground#readme"
+  "homepage": "https://github.com/thepag/styleguide-playground#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
 }
