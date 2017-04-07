@@ -40,7 +40,7 @@ class App extends Component {
     }
     return (
       <div>
-        <h1>Styleguide Playground</h1>
+        <h1>{t('app name')}</h1>
         <Lang />
         <Button
           name={t('button text')}
