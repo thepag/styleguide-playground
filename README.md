@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-npm Installation
+npm install
 ```
 
 ## Dev Server
