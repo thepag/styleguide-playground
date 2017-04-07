@@ -70,7 +70,6 @@ const config = {
     new webpack.NoEmitOnErrorsPlugin(),
   ],
   devServer: {
-    // contentBase: resolve(__dirname, 'public'),
     contentBase: 'public',
     compress: true,
     hot: true,

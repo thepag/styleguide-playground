@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 const Button = props => (
   <button
-    className={`button${props.disabled ? ' is-disabled' : ''}`}
+    className={`button${props.disabled ? ' disabled' : ''}`}
     onClick={!props.disabled ? props.onClick : null}
   >
     {props.name}
