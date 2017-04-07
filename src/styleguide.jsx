@@ -8,6 +8,8 @@ import { I18nextProvider } from 'react-i18next';
 import App from './App';
 import i18n from './i18n';
 
+require('./reset.scss');
+
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>

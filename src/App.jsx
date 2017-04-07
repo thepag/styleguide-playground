@@ -3,6 +3,8 @@ import { translate } from 'react-i18next';
 
 import { Button, Lang, Message } from './modules';
 
+require('./App.scss');
+
 class App extends Component {
 
   constructor(props) {
@@ -22,30 +24,24 @@ class App extends Component {
   render() {
     const { t } = this.props;
     const { message } = this.state;
-    if (message) {
+    const messages = () => {
+      if (!message) return null;
       return (
-        <div>
-          <h1>{t('app name')}</h1>
-          <Lang />
-          <Button
-            name={t('button text')}
-            onClick={() => { this.onClick(); }}
-          />
-          <Message
-            title={message}
-            onClick={() => { this.setState({ message: '' }); }}
-          />
-        </div>
+        <Message
+          title={message}
+          onClick={() => { this.setState({ message: '' }); }}
+        />
       );
-    }
+    };
     return (
-      <div>
-        <h1>{t('app name')}</h1>
+      <div className="app-view">
+        <div className="app-title">{t('app name')}</div>
         <Lang />
         <Button
           name={t('button text')}
           onClick={() => { this.onClick(); }}
         />
+        {messages()}
       </div>
     );
   }

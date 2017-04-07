@@ -1,9 +1,12 @@
 import React, { PropTypes } from 'react';
 
+require('./Button.scss');
+
 const Button = props => (
   <button
     className={`button${props.disabled ? ' disabled' : ''}`}
     onClick={!props.disabled ? props.onClick : null}
+    disabled={props.disabled}
   >
     {props.name}
   </button>

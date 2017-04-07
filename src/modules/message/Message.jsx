@@ -2,8 +2,10 @@ import React, { PropTypes } from 'react';
 
 import { Button } from '..';
 
+require('./Message.scss');
+
 const Message = props => (
-  <div>
+  <div className="message">
     <span>&ldquo;{props.title}&rdquo;</span>
     <Button
       name="X"

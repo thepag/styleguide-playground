@@ -20,7 +20,7 @@ const config = {
       {
         exclude: [
           /\.(jsx|js)$/,
-          /\.(css)$/,
+          /\.(sass|scss|css)$/,
         ],
         use: [
           {
@@ -36,13 +36,10 @@ const config = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          // options: {
-          //   presets: ['env'],
-          // },
         },
       },
       {
-        test: /\.(css)$/,
+        test: /\.(sass|scss|css)$/,
         use: [
           {
             loader: 'style-loader',
@@ -50,16 +47,26 @@ const config = {
           {
             loader: 'css-loader',
           },
+          {
+            loader: 'sass-loader',
+            options: {
+              outputStyle: 'expanded',
+              sourceMap: true,
+              // includePaths: [
+              //   resolve(__dirname, '../node_modules'),
+              // ],
+            },
+          },
         ],
       },
     ],
   },
   resolve: {
-    modules: [
-      resolve(__dirname, 'src'),
-      'node_modules',
-    ],
-    extensions: ['.js', '.jsx', '.css'],
+    // modules: [
+    //   'src',
+    //   'node_modules',
+    // ],
+    extensions: ['.js', '.jsx', '.css', '.scss'],
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({

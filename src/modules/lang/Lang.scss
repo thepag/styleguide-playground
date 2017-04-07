@@ -1,0 +1,15 @@
+$color: #6e6;
+
+.lang-selection {
+  font-family: 'Helvetica';
+  background-color: #f;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px 10px;
+  .lang-title {
+    margin: 0 10px 10px 0;
+    padding: 0;
+    font-weight: bold;
+  }
+}
