@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { I18nextProvider } from 'react-i18next';
 
-import App from './App';
+import App from './modules/App';
 import i18n from './i18n';
 
 require('./reset.scss');
@@ -24,5 +24,5 @@ const render = (Component) => {
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./App', () => { render(App); });
+  module.hot.accept('./modules/App', () => { render(App); });
 }

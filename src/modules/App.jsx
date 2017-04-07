@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { translate } from 'react-i18next';
 
-import { Button, Lang, Message } from './modules';
+import { Button, Lang, Message } from '.';
 
 require('./App.scss');
 
