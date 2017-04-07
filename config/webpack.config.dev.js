@@ -5,9 +5,9 @@ const config = {
   devtool: 'eval',
   context: resolve(__dirname, '..'),
   entry: {
-    styleguide: [
+    app: [
       'react-hot-loader/patch',
-      './src/styleguide.jsx',
+      './src/app.jsx',
     ],
   },
   output: {
