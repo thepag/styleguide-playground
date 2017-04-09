@@ -9,6 +9,10 @@ const config = {
       'react-hot-loader/patch',
       './src/app.jsx',
     ],
+    styleguide: [
+      'react-hot-loader/patch',
+      './src/styleguide.jsx',
+    ],
   },
   output: {
     filename: '[name].js',
@@ -21,6 +25,7 @@ const config = {
         exclude: [
           /\.(jsx|js)$/,
           /\.(sass|scss|css)$/,
+          /\.(md)$/,
         ],
         use: [
           {
@@ -59,6 +64,17 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.(md)$/,
+        use: [
+          {
+            loader: 'catalog/lib/loader',
+          },
+          {
+            loader: 'raw-loader',
+          },
+        ],
+      },
     ],
   },
   resolve: {
@@ -66,7 +82,7 @@ const config = {
     //   'src',
     //   'node_modules',
     // ],
-    extensions: ['.js', '.jsx', '.css', '.scss'],
+    extensions: ['.js', '.jsx', '.css', '.scss', '.md'],
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
